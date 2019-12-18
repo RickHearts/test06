@@ -18,5 +18,13 @@ pipeline {
       }
     }
 
+    stage('Edge') {
+      steps {
+        input(message: 'Do you want to continue?', ok: 'Continue')
+        sleep 5
+        echo 'Edge Tests'
+      }
+    }
+
   }
 }
